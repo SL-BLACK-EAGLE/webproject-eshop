@@ -157,7 +157,7 @@ include "connection.php"
                                 </div>
                             </div>
                             <div class="col-6 text-end">
-                                <a href="#" class="link-primary">Forgot Password?</a>
+                                <a href="#" class="link-primary" onclick="forgetPassword(); " >Forgot Password?</a>
                             </div>
                             <div class="col-12 col-lg-6 d-grid">
                                 <button class="btn btn-primary" onclick="signin();">Sign In</button>
@@ -173,6 +173,46 @@ include "connection.php"
                 </div>
             </div>
 
+<!--            modal-->
+            <div class="modal" id="forgotPasswordModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Forget Password</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3">
+                               <div class="col-6">
+                                   <label class="form-label">New Password</label>
+                                   <div class="input-group mb-3">
+                                       <input type="password" class="form-control" placeholder="new passowrd" />
+                                       <button class="btn btn-outline-secondary" type="button" id="">Show</button>
+                                   </div>
+                               </div>
+                                <div class="col-6">
+                                    <label class="form-label">Re-Type Password</label>
+                                    <div class="input-group mb-3">
+                                        <input type="password" class="form-control" placeholder="new passowrd" />
+                                        <button class="btn btn-outline-secondary" type="button" id="">Show</button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Verification Code</label>
+                                    <div class="input-group mb-3">
+                                        <input type="password" class="form-control" placeholder="new passowrd" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Change Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            modal-->
             <!-- content -->
 
             <!-- footer -->

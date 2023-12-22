@@ -80,3 +80,32 @@ function signin(){
     request.open("POST", "http://localhost/webproject-eshop/signinprocess.php", true);
     request.send(form);
 }
+
+var forgotPasswordModal;
+function forgetPassword(){
+   // var modal = document.getElementById("forgotPasswordModal");
+   // forgotPasswordModal = new bootstrap.Modal(modal);
+   //  forgotPasswordModal.show();
+
+    var email = document.getElementById("email2").value;
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === 4 && request.status === 200){
+            var response = request.responseText;
+
+            if (response === "success"){
+                alert(response);
+                // document.getElementById("msg2").innerHTML = "Password reset link has been sent to your email";
+                // document.getElementById("msg2").className = ("alert alert-success");
+                // document.getElementById("msgdiv2").className = ("d-block");
+            }
+            else{
+                alert(response);
+                // document.getElementById("msg2").innerHTML = response;
+                // document.getElementById("msgdiv2").className = ("d-block");
+            }
+        }
+    }
+    request.open("GET", "forgotpassword.php?email="+email, true);
+    request.send();
+}
